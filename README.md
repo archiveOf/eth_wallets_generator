@@ -1,4 +1,4 @@
-# generate_eth_wallets
+# eth_wallets_generator
 Массово генерирует кошельки, сохраняет сразу в 4 файла. Запустите, введите количество.  
   
 ```wallets.txt``` - только кошельки  
@@ -8,11 +8,19 @@
 ```wallets.csv``` - таблица, в формате address_wallet:private_key:seed
 
 # Установка
+1. Создаем виртуальное окружение
+```
+python -m venv venv
+.\venv\Scripts\activate
+```
 
-необходимо 2 библиотеки, можно установить 2 способами:  
-```pip install pandas``` (для таблицы)  
-```pip install eth_account bip_utils```  
+2. Устанавливаем все необходимые зависимости:
+```
+pip install -r requirements.txt
+```
 
-или:  
+3. Запускаем скрипт (при запуске в консоли указываем кол-во кошельков)
 
-```pip install -r requirements.txt``` (установит автоматически из requirements.txt)
+```
+python main.py 
+```
